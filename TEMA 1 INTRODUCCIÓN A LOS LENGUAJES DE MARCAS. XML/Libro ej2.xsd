@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Titulo" />
+                <xs:element name="Seccion" />
+                <xs:element name="SubSeccion" />
+                <xs:element name="Contenido" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="Capitulo" use="required" />
+                        <xs:attribute name="Separacion" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Copyright" />
+            </xs:sequence>
+            <xs:attribute name="Catalogo" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Capitulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Tema">
+                    <xs:complexType>
+                        <xs:attribute name="Separacion" use="required" />
+                        <xs:attribute name="Copyright" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="materia" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

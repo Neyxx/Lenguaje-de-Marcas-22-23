@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xs:element [
+    <!ELEMENT shiporder ((orderid)*, orderperson)>
+    <!ELEMENT orderid (#PCDATA)>
+    <!ELEMENT orderperson ((shipto)*, name, address, city, country)>
+    <!ELEMENT shipto (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT country (#PCDATA)>
+    <!ELEMENT item ((number)*, title, note, quantity,country)>
+    <!ELEMENT number (#PCDATA)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT note (#PCDATA)>
+    <!ELEMENT quantity (#PCDATA)>
+    <!ELEMENT country (#PCDATA)>
+
+]>
+<shiporder orderid="1">
+    <orderperson shipto="manolo">
+        <name>manuel</name>
+        <address>plaza de la calle</address>
+        <city>malaga</city>
+        <country>españa</country>
+    </orderperson>
+    <item number="1">
+        <title>Cafe</title>
+        <note>Espero que te guste</note>
+        <quantity>1</quantity>
+        <country>españa</country>
+    </item>
+</shiporder>

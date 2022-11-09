@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Libro [
+ <!ELEMENT Libro (Titulo, Seccion, SubSeccion?, Contenido, Copyright)>
+ <!ATTLIST Libro Catalogo CDATA #REQUIRED>
+ <!ELEMENT Titulo (#PCDATA)>
+ <!ELEMENT Seccion (#PCDATA)>
+ <!ELEMENT SubSeccion (#PCDATA)>
+ <!ELEMENT Contenido ((Capitulo+)|(Capitulo+, Separacion?)+)>
+ <!ELEMENT Capitulo (Tema+)>
+ <!ATTLIST Capitulo materia (XML|XHTML) "XML">
+ <!ELEMENT Tema (#PCDATA)>
+ <!ELEMENT Separacion EMPTY>
+ <!ELEMENT Copyright (#PCDATA)>
+]>
+
+<Libro Catalogo="">
+    <Titulo></Titulo>
+    <Seccion></Seccion>
+        <SubSeccion></SubSeccion>
+    <Contenido Capitulo=""></Contenido>
+    <Contenido Capitulo="" Separacion=""></Contenido>
+    <Copyright></Copyright>
+</Libro>
+<Capitulo materia="XML">
+    <Tema Separacion="" Copyright=""></Tema>
+</Capitulo>
+<Capitulo materia="XHTML">
+    <Tema Separacion="" Copyright=""></Tema>
+</Capitulo>
